@@ -1,0 +1,706 @@
+# Ex01 Portfolio
+## Date: 27/10/2026
+
+## AIM
+To create a Portfolio using HTML and CSS.
+
+## ALGORITHM
+### STEP 1
+Create an HTML file (index.html)
+
+### STEP 2
+Create a CSS file (style.css)
+
+### STEP 3
+Include a navigation bar with links to different sections.
+
+### STEP 4
+Add structured sections for introduction, about, projects, and contact details.
+
+### STEP 5
+Define global styles for fonts, colors, and layout.
+
+### STEP 6
+Style the header, navigation bar, and sections.
+
+### STEP 7
+Use Flexbox or CSS Grid for layout design.
+
+### STEP 8
+Add hover effects and transitions for interactivity.
+
+### STEP 9
+Add Images and Media.
+
+### STEP 10
+Use optimized images for a professional look.
+
+### STEP 11
+Open the HTML file in a browser to check layout and functionality.
+
+### STEP 12
+Fix styling issues and refine content placement.
+
+### STEP 13
+Deploy the Portfolio.
+
+### STEP 14
+Upload to GitHub Pages for free hosting.
+
+## PROGRAM
+
+## HTML
+
+```
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sharon Clara A | Personal Portfolio</title>
+
+    <style>
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #0f172a;
+            color: white;
+        }
+
+
+        header {
+            width: 100%;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #111c35;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 27px;
+            font-weight: bold;
+            color: #38bdf8;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 22px;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+
+        .home {
+            min-height: 90vh;
+            padding: 70px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .home-content {
+            max-width: 600px;
+        }
+
+        .home-content h3 {
+            font-size: 25px;
+            color: #38bdf8;
+        }
+
+        .home-content h1 {
+            font-size: 48px;
+            margin: 15px 0;
+        }
+
+        .home-content h2 {
+            font-size: 27px;
+            margin-bottom: 20px;
+        }
+
+        .home-content p {
+            color: #cbd5e1;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .btn {
+            display: inline-block;
+            margin: 25px 10px 0 0;
+            padding: 12px 28px;
+            background: #38bdf8;
+            color: #0f172a;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: white;
+            transform: scale(1.05);
+        }
+
+
+        .profile-img img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #38bdf8;
+            box-shadow: 0 0 25px #38bdf8;
+        }
+
+
+        section {
+            padding: 75px 10%;
+        }
+
+        .heading {
+            text-align: center;
+            font-size: 35px;
+            color: #38bdf8;
+            margin-bottom: 40px;
+        }
+
+
+        .about {
+            text-align: center;
+        }
+
+        .about p {
+            max-width: 850px;
+            margin: auto;
+            color: #cbd5e1;
+            font-size: 17px;
+            line-height: 2;
+        }
+
+
+        .education-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .education-box {
+            width: 100%;
+            max-width: 600px;
+            background: #1e293b;
+            padding: 30px;
+            border-left: 5px solid #38bdf8;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .education-box:hover {
+            transform: translateY(-8px);
+        }
+
+        .education-box h3 {
+            color: #38bdf8;
+            margin-bottom: 15px;
+        }
+
+        .education-box p {
+            color: #cbd5e1;
+            line-height: 2;
+        }
+
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .skill-box {
+            background: #1e293b;
+            padding: 18px 30px;
+            border: 1px solid #38bdf8;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .skill-box:hover {
+            background: #38bdf8;
+            color: #0f172a;
+            transform: translateY(-5px);
+        }
+
+
+        .project-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .project-box {
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .project-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 15px #38bdf8;
+        }
+
+        .project-box h3 {
+            color: #38bdf8;
+            margin-bottom: 15px;
+        }
+
+        .project-box p {
+            color: #cbd5e1;
+            line-height: 1.8;
+        }
+
+
+        .objective {
+            text-align: center;
+        }
+
+        .objective p {
+            max-width: 800px;
+            margin: auto;
+            color: #cbd5e1;
+            line-height: 2;
+            font-size: 17px;
+        }
+
+        /* CONTACT SECTION */
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            color: #cbd5e1;
+            margin: 18px;
+            font-size: 17px;
+        }
+
+        .contact a:not(.btn) {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+
+        .contact a:not(.btn):hover {
+            text-decoration: underline;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #111c35;
+            text-align: center;
+            padding: 25px;
+            color: #cbd5e1;
+            line-height: 2;
+        }
+
+
+        @media (max-width: 900px) {
+
+            .project-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .home-content h1 {
+                font-size: 38px;
+            }
+
+        }
+
+        @media (max-width: 768px) {
+
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            nav a {
+                margin: 0;
+            }
+
+            .home {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .profile-img img {
+                width: 220px;
+                height: 220px;
+            }
+
+            .home-content h1 {
+                font-size: 34px;
+            }
+
+            .project-container {
+                grid-template-columns: 1fr;
+            }
+
+            .heading {
+                font-size: 29px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+
+    <header>
+
+        <div class="logo">Sharon.</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <section class="home" id="home">
+
+        <div class="home-content">
+
+            <h3>Hello, I'm</h3>
+
+            <h1>Sharon Clara A</h1>
+
+            <h2>Computer Science Student | Aspiring Web Developer</h2>
+
+            <p>
+                Welcome to my personal portfolio!
+
+                I am a passionate Computer Science and Engineering
+                student interested in web development, programming
+                and creative technology.
+
+                I love creating modern, responsive and user-friendly
+                websites while continuously learning new technologies.
+            </p>
+
+            <a href="#about" class="btn">Explore More</a>
+
+            <a href="#contact" class="btn">Contact Me</a>
+
+        </div>
+
+
+
+        <div class="profile-img">
+
+            <img src="my-photo.jpeg"
+                 alt="Sharon Clara A Profile Photo">
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT SECTION -->
+
+    <section class="about" id="about">
+
+        <h2 class="heading">About Me</h2>
+
+        <p>
+            Hi! I'm Sharon Clara A, currently pursuing Bachelor of
+            Engineering in Computer Science and Engineering at
+            Saveetha Engineering College.
+
+            I am passionate about technology, frontend development
+            and designing attractive websites.
+
+            I enjoy learning programming languages, exploring new
+            tools and developing practical projects.
+
+            My aim is to become a professional Web Developer and
+            contribute to innovative software solutions.
+        </p>
+
+    </section>
+
+
+
+    <section id="education">
+
+        <h2 class="heading">My Education</h2>
+
+        <div class="education-container">
+
+            <div class="education-box">
+
+                <h3>Bachelor of Engineering (B.E.)</h3>
+
+                <p>
+                    Department: Computer Science and Engineering
+                    <br>
+                    College: Saveetha Engineering College
+                    <br>
+                    Graduation Year: 2028
+                    <br>
+                    Current Year: 3rd Year
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SKILLS SECTION -->
+
+    <section id="skills">
+
+        <h2 class="heading">My Technical Skills</h2>
+
+        <div class="skills-container">
+
+            <div class="skill-box">HTML</div>
+
+            <div class="skill-box">CSS</div>
+
+            <div class="skill-box">JavaScript</div>
+
+            <div class="skill-box">Bootstrap</div>
+
+            <div class="skill-box">Tailwind CSS</div>
+
+            <div class="skill-box">Python</div>
+
+            <div class="skill-box">Java</div>
+
+            <div class="skill-box">PHP Basics</div>
+
+            <div class="skill-box">Flask Basics</div>
+
+            <div class="skill-box">Git</div>
+
+            <div class="skill-box">GitHub</div>
+
+            <div class="skill-box">UI/UX Design</div>
+
+            <div class="skill-box">Responsive Web Design</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECT SECTION -->
+
+    <section id="projects">
+
+        <h2 class="heading">My Projects</h2>
+
+        <div class="project-container">
+
+
+            <div class="project-box">
+
+                <h3>Personal Portfolio Website</h3>
+
+                <p>
+                    Developed a personal portfolio website using
+                    HTML and CSS to showcase my profile, education,
+                    technical skills and projects.
+                </p>
+
+            </div>
+
+
+            <div class="project-box">
+
+                <h3>Student Registration Form</h3>
+
+                <p>
+                    Created a student registration form using
+                    HTML, CSS and JavaScript to collect and
+                    display student details.
+                </p>
+
+            </div>
+
+
+            <div class="project-box">
+
+                <h3>Mini E-Commerce Website</h3>
+
+                <p>
+                    Designed a simple e-commerce frontend website
+                    with product displays and a user-friendly
+                    shopping interface.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <section class="objective">
+
+        <h2 class="heading">Career Objective</h2>
+
+        <p>
+            To become a skilled Web Developer by improving my
+            technical knowledge, problem-solving abilities and
+            practical development experience.
+
+            I aim to create innovative, responsive and efficient
+            web applications while continuously exploring
+            emerging technologies.
+        </p>
+
+    </section>
+
+
+    <!-- CONTACT SECTION -->
+
+    <section class="contact" id="contact">
+
+        <h2 class="heading">Contact Me</h2>
+
+        <p>
+            <strong>Name:</strong> Sharon Clara A
+        </p>
+
+        <p>
+            <strong>Department:</strong>
+            Computer Science and Engineering
+        </p>
+
+        <p>
+            <strong>College:</strong>
+            Saveetha Engineering College
+        </p>
+
+        <p>
+            <strong>Email:</strong>
+            <a href="mailto:sharonclara1111@gmail.com">
+                sharonclara1111@gmail.com
+            </a>
+        </p>
+
+        <p>
+            <strong>GitHub:</strong>
+            <a href="https://github.com/SharonClara"
+               target="_blank">
+                github.com/SharonClara
+            </a>
+        </p>
+
+        <a href="mailto:sharonclara1111@gmail.com" class="btn">
+            Send Email
+        </a>
+
+        <a href="https://github.com/SharonClara"
+           target="_blank" class="btn">
+            Visit GitHub
+        </a>
+
+    </section>
+
+
+
+    <footer>
+
+        <p>
+            © 2026 Sharon Clara A. All Rights Reserved.
+        </p>
+
+        <p>
+            Designed and Developed by Sharon Clara A
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+```
+
+## OUTPUT
+
+
+
+
+
+
+
+
+
+
+
+
+
+![alt text](<Screenshot 2026-10-30 225206.png>)
+
+![alt text](<Screenshot 2026-10-30 233910.png>)
+
+![alt text](<Screenshot 2026-10-30 235040.png>)
+
+
+![alt text](<Screenshot 2026-10-30 234902.png>)
+
+
+
+
+
+## RESULT
+The program for creating Portfolio using HTML and CSS is executed successfully.
